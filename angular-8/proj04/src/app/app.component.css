@@ -1,0 +1,17 @@
+html{
+    background-color: blanchedalmond;
+}
+table, td{
+    border:1px solid black;
+    padding: 1p;
+    text-align: center;
+    margin: auto;
+}
+h2{
+    text-align: center;
+    color: coral;
+}
+div{
+    text-align: center;
+    color: crimson;
+}

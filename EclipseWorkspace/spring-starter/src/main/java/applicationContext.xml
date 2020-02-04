@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+    
+    
+   <!-- Register beans here -->
+   
+   <beans>
+   
+   <bean class="com.w.Engineer" id="theEngineer" init-method="initBean" destroy-method="beforeBeanDelete" scope="singleton"> 
+   
+   <!-- <constructor-arg ref="firstAddress"></constructor-arg>
+   <constructor-arg ref="secondAddress"></constructor-arg> -->
+   
+   <!--  <property name="address" ref="firstAddress"></property> 
+    
+    <property name="address2">
+    	<bean class="com.w.Address">
+    		<property name="location" value="Bombay"></property>
+   			<property name="pinCode" value="226654"></property>
+    	</bean>
+    </property> -->
+    
+    <property name="addresses">
+    
+    	<list>
+    		<ref bean="firstAddress"/>
+    		<ref bean="secondAddress"/>
+    		<ref bean="firstAddress"/>
+    	</list>
+    
+    </property>
+    
+   
+   </bean>
+   
+   <bean class="com.w.Address" id="firstAddress">
+   		<property name="location" value="Bangalore"></property>
+   		<property name="pinCode" value="460050"></property>
+   </bean>
+   
+    <bean class="com.w.Address" id="secondAddress">
+   		<property name="location" value="Pune"></property>
+   		<property name="pinCode" value="228855"></property>
+   </bean> 
+   
+    
+   
+   
+   
+   
+   	<!-- Setter injection goes here -->
+   		<!-- <property name="uName" value="Ramesh"></property>
+   		<property name="regId" value="6155624"></property> -->
+   		
+   		
+   		<!-- Constructor Injection goes like this: -->
+   		
+   		<!-- <constructor-arg value="Pushpa"></constructor-arg>
+   		<constructor-arg value="615" type="int" index="1"></constructor-arg> -->
+   		
+   	
+   	
+   	<!-- </bean>   -->
+   </beans>

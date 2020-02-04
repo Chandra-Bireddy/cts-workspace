@@ -1,0 +1,5 @@
+CREATE TABLE gym_members(
+	member_id CHAR(4) PRIMARY KEY,
+	name VARCHAR(20) NOT NULL,
+	fees DECIMAL(7,2) NOT NULL,
+	joining_date date NOT NULL);

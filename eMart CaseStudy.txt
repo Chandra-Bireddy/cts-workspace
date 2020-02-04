@@ -1,0 +1,118 @@
+	Model
+---------------------
+class Buyer{
+	String cust_id;
+	String cust_name;
+	String password;
+	String eMail;
+	String phone;
+	LocalDateTime createdDate;
+}
+
+
+class Seller{
+	String seller_id;
+	String seller_name;
+	String password;
+	String company_name;
+	String gstIn;
+	String eMail;
+	String about;
+	String postalAddress;
+	String website;
+	String phone;
+}
+
+
+class Admin{
+	String admin_id;
+	String name;
+	String eMail;
+	String password;
+}
+
+
+class Item{
+	String itemId;
+	String categoryId;
+	double price;
+	String itemName;
+	String description;
+	int stockNumber;
+	String remarks;
+}
+
+
+	Services
+----------------------------
+
+class BuyerServices{
+	checking the validity of credentials;
+	filtering based on some fields;
+	searching an item;
+	adding to cart;
+	purchase history;
+	}
+
+class SellerServices{
+	add item with quantity;
+	update stock;
+	delete items;
+	view inventory;
+	turnover;
+	tax calculation;
+	purchase history;
+}
+
+class AdminServices{
+	Block/Unblock seller;
+	Block/Unblock specific item sold by seller;
+	Block/Unblock specific buyer;
+	Add/Remove categories, subcategories along with gst;
+}
+
+
+class CategoryFiltering implements Comparator<Item>{
+}
+
+
+
+	DAO
+-------------------
+
+class ItemDao{
+}
+
+class BuyerDao{
+}
+
+class SellerDao{
+}
+
+class AdminDao{
+}
+
+
+
+	UI
+---------------------
+
+class BuyerUI{
+}
+
+class SellerUI{
+}
+
+class AdminUI{
+}
+
+
+
+	
+
+
+
+
+
+
+

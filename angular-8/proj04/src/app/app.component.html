@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Four</title>
+</head>
+<body>
+  <h2>{{message}}</h2>
+  <h2>Angular{{version}}</h2>
+  <div>Enter topic:
+    <input type="text" placeholder="topic name" #currentTopic/>
+    <button type="button" (click)="addTopic(currentTopic.value)">Add</button>
+    <span>     </span>
+    <button type="button" (click)="delete(currentTopic.value)">Delete</button>
+    <button type="button" (click)="search(currentTopic.value)">Search</button>
+  </div>
+  <br><br>
+  <table>
+    <thead>
+      <tr>
+        <td>Topic id</td>
+        <td>Topic Name</td>
+        <td colspan="2">Action</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i=index; let topic of topics">
+        <td>
+          {{i+1}}
+        </td>
+        <td>{{topic}}</td>
+        <td><button type="button" (click)="delTopic(i)">Delete</button></td>
+        <td><button type="button" (click)="update(i)">Update</button></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">No of topics: {{topics.length}}</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
